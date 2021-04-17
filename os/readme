@@ -1,0 +1,36 @@
+https://www.makeuseof.com/tag/create-operating-system-linux-scratch-linux-si/
+Create Your Very Own Operating System With Linux From Scratch [Linux]
+BY DANNY STIEBEN
+PUBLISHED JUL 14, 2012
+
+
+Do you know how customizable Linux really is? Well you should if you've even heard of Linux or dabbled in it a bit. If not, try taking a look at a list of over 1,000 different Linux distributions currently available. All of them try to cater to your exact needs and tastes, so a reasonable mind would think that there'd have to be a distribution out there with which you'll find the perfect companion.
+
+tux_big
+Do you know how customizable Linux really is? Well you should if you've even heard of Linux or dabbled in it a bit. If not, try taking a look at a list of over 1,000 different Linux distributions currently available. All of them try to cater to your exact needs and tastes, so a reasonable mind would think that there'd have to be a distribution out there with which you'll find the perfect companion.
+
+However, maybe you don't want to take the time to look through and test every single distribution, especially if there are well over 1,000 of them out there. Maybe you don't want to take your chances on whether a distribution is a match made in heaven, but instead you want a guarantee. What better way to know you have the perfect match in your hands than to make the operating system yourself?
+
+Why Should I?
+Why and how can you make your own Linux operating system? It's quite simple (well, relatively speaking anyway) as a project exists to help people get started with something like this. The Linux From Scratch project was created specifically to get people going on making their own Linux operating system to meet their own needs, whether it's for special hardware accommodations, maximizing performance, staying on the bleeding edge, or learning the internals of Linux.
+
+Don't think that Linux From Scratch is another distribution which simply starts with bare-bones. LFS is actually just a collection of documentation, so everything you do literally comes from each project's source code. In other words, with the help of LFS documentation, you can download the Linux kernel's source code directly from their site and work your way from there until you've eventually built a complete operating system -- or at least as much of an operating system as you need.
+
+Use Linux to Make Linux
+create an operating system
+When creating your own Linux operating system, you'll need to understand that you'll have to use a Linux distribution to create another one. This is because, as you're creating everything directly from source code, you'll need common tools provided with most Linux distributions in order to compile and install your LFS system. You don't have to have the temporary distribution installed; you can just run one off a LiveCD like Ubuntu if you wish.
+
+Getting Started / Partitioning
+make an operating system
+Before you even start, it's mandatory that you go over to this page and open up the latest LFS documentation on getting an LFS system started. The documentation will contain links and detailed information on how to accomplish the required steps, which is something this article won't cover in full.
+
+The first real step after opening up the documentation is to create a new partition where you'll install your new LFS operating system. You shouldn't have to do anything different from what you ordinarily do, whether it be a single ext4 partition to hold everything, separate root and home partitions, or whatever else you might do. You're welcome to create these partitions using your favorite partitioning tool, such as GParted.
+
+Downloading Initial Source Code
+Once you have your partitions ready, you'll need to head over to Chapter 3 to download the source code for all necessary packages and patches. As far as I'm aware of, all of these packages are absolutely required, so your system won't run without these. Then again, the front page of LFS brags that a system can be tweaked down to a mere 5MB, but you really have to know what you're doing in order to accomplish that.
+
+Compiling & Installing Your Base System
+create an operating system
+After making a few more changes as final preparations as defined in Chapter 4 of the documentation, you will begin to build the bare-bones of your LFS system. By following the guide, you'll be compiling the tools which will make up the toolchain which you will then use to build the rest of the basics. Once you've completed that, you'll "chroot" into your new system (which is the equivalent of restarting into your new operating system, except you are not literally restarting and the change only applies to your terminal window) and begin compiling everything else that will make up your new operating system.
+
+Once you have a simple configuration going, you can begin to install other software that will make your system truly yours. What other software you should install is completely up to you, your wants, and your needs. Just remember, there is no package manager as the software's source code is downloaded and compiled.
